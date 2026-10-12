@@ -1,5 +1,5 @@
 
-name: User Service CI/CD
+name: UserService CI/CD
 
 on:
   push:
@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   build:
-    name: Build and Test HotelService
+    name: Build and Test UserService
     runs-on: ubuntu-latest
 
     steps:
@@ -36,7 +36,7 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: HotelService-jar
+          name: UserService-jar
           path: target/*.jar
           if-no-files-found: error
           retention-days: 7
